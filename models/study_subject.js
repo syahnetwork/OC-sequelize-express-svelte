@@ -200,8 +200,9 @@ module.exports = sequelize => {
       name: "study_subject_idx_study",
       unique: false,
       fields: ["study_id"]
-    }]
+    }
+    ]
   };
-  const StudySubjectModel = sequelize.define("study_subject_model", attributes, options);
+  const StudySubjectModel = sequelize.define("study_subject", attributes, options);
   return StudySubjectModel;
 };

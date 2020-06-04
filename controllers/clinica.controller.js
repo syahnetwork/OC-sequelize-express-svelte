@@ -1,5 +1,5 @@
 const db = require("../models")
-const subject = db.study_subject_model
+const subject = db.clinica
 const op = db.Sequelize.Op
 
 exports.create = (req, res) => {
@@ -10,12 +10,12 @@ exports.create = (req, res) => {
     return
   }
 
-  const study_subject_model = {
+  const study_subject = {
     label: req.body.label,
     oc_oid: req.body.oc_oid
   }
 
-  subject.create(study_subject_model)
+  subject.create(study_subject)
     .then(data => {
       res.send(data)
     })
